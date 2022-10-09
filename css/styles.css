@@ -313,8 +313,6 @@ img {
 .member-description {
   padding-top: 30px;
   padding-bottom: 30px;
-  border: var(--title-and-background-white) 1px solid;
-  border-radius: 0px 0px 4px 4px;
 
   background-color: var(--title-and-background-white);
 }
@@ -339,13 +337,20 @@ img {
   justify-content: center;
 }
 
+.social-group {
+  margin-right: 10px;
+}
+
+.social-group:last-child {
+  margin-right: 0;
+}
+
 .social-button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 44px;
   height: 44px;
-  margin-right: 10px;
   border-radius: 50%;
 
   color: var(--social-icons-color);
@@ -422,17 +427,22 @@ img {
 
 .footer {
   padding-bottom: 60px;
+  padding-top: 60px;
 
   background-color: var(--background-dark);
 }
 
 .footer-wrapper {
   display: flex;
+  align-items: baseline;
+}
+
+.footer-info {
+  margin-right: 70px;
 }
 
 .logo-footer {
   display: inline-block;
-  padding-top: 60px;
   margin-bottom: 20px;
 
   color: var(--title-and-background-white);
@@ -442,12 +452,6 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
-}
-
-.footer-list {
-  display: flex;
-  flex-direction: column;
-  margin-right: 70px;
 }
 
 .footer .item {
@@ -476,12 +480,6 @@ img {
 
 /* Social Media Footer */
 
-.social-footer {
-  display: flex;
-  flex-direction: column;
-  margin-top: 72px;
-}
-
 .social-footer .social-footer-text {
   margin-bottom: 20px;
 
@@ -496,20 +494,24 @@ img {
   display: flex;
 }
 
+.social-group-footer .item-icon {
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.social-group-footer .item-icon:last-child {
+  margin-right: 0;
+}
+
 .social-button-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 44px;
   height: 44px;
-  margin-right: 10px;
   border-radius: 50%;
 
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.social-button-footer:last-child {
-  margin-right: 0;
 }
 
 .social-button-footer:hover,
@@ -591,7 +593,14 @@ img {
   margin-bottom: 30px;
 }
 
-.portfolio-card:hover {
+.portfolio-link {
+  display: block;
+
+  text-decoration: none;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -627,6 +636,7 @@ img {
 }
 
 .sample-description {
+  color: var(--main-text-color);
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
